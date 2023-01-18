@@ -1,0 +1,42 @@
+name: Publish Node.js packages, create release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  publish-node-packages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Build and publish to npm registry
+        continue-on-error: true
+        run: |
+          npm ci
+          npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14.x"
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: Publish to GitHub registry
+        continue-on-error: true
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

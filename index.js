@@ -11,14 +11,14 @@ inquirer
     {
       name: "app_name",
       message: "What is your Project Name?",
-      defaultValue: "writecode_app",
-      default: "writecode_app",
+      defaultValue: "youcode_app",
+      default: "youcode_app",
     },
   ])
   .then((answers) => {
     const appName = answers.app_name;
     const projectPath = path.join(process.cwd(), appName);
-    console.info("Answer:", appName);
+    console.info("Project Name:", appName);
     if (appName) {
       createBasicServer(appName, projectPath);
     }

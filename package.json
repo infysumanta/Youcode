@@ -1,10 +1,10 @@
 {
-  "name": "writecode",
-  "version": "0.0.1",
-  "description": "Write code and boilerplate generating tools for javascript apps",
+  "name": "youcode",
+  "version": "0.0.2",
+  "description": "Youcode is a boilerplate generating tools for javascript apps",
   "main": "index.js",
   "bin": {
-    "writecode": "./index.js"
+    "youcode": "./index.js"
   },
   "scripts": {
     "test": "jest"
@@ -15,6 +15,8 @@
   },
   "keywords": [
     "writecode",
+    "youcode",
+    "create-app-code",
     "code generator",
     "code",
     "generator"

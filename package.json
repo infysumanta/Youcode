@@ -6,7 +6,9 @@
   "bin": {
     "writecode": "./index.js"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/infysumanta/writecode.git"

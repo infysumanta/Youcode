@@ -1,0 +1,29 @@
+{
+  "name": "writecode",
+  "version": "0.0.1",
+  "description": "Write code and boilerplate generating tools for javascript apps",
+  "main": "index.js",
+  "bin": {
+    "writecode": "./index.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infysumanta/writecode.git"
+  },
+  "keywords": [
+    "writecode",
+    "code generator",
+    "code",
+    "generator"
+  ],
+  "author": "Sumanta Kabiraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infysumanta/writecode/issues"
+  },
+  "homepage": "https://github.com/infysumanta/writecode#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}
